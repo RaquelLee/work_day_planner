@@ -21,7 +21,7 @@ for (var i = 0; i < elTextArea.length; i++) {
 var elButton = $("button");
 
 elButton.click(function (){
-       var btnTime = parseInt($(this).attr("value"));
-       var textInput = $(this).parent().siblings("textarea").val();
-       localStorage.setItem(btnTime, textInput);
+    var btnTime = parseInt($(this).attr("value"));
+    var textInput = $(this).parent().siblings("textarea").val();
+    localStorage.setItem(btnTime, textInput);
 });
