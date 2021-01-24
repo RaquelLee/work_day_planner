@@ -5,7 +5,7 @@ var currentHr = moment().format('HH');
 var currentHrInt = parseInt(currentHr);
 var elTextArea = $("textarea");
 
-for(var i = 0; i < elTextArea.length; i++){
+for (var i = 0; i < elTextArea.length; i++) {
     var $this = $(elTextArea[i]);
     var elTime = parseInt($this.attr("value"));
     var current = localStorage.getItem(elTime);
@@ -17,3 +17,11 @@ for(var i = 0; i < elTextArea.length; i++){
     } else {
         $this.addClass("future");
 }};
+
+var elButton = $("button");
+
+elButton.click(function (){
+       var btnTime = parseInt($(this).attr("value"));
+       var textInput = $(this).parent().siblings("textarea").val();
+       localStorage.setItem(btnTime, textInput);
+});
